@@ -58,3 +58,5 @@ class System:
             # TODO: Populate unknown Process sizes
         return False
 
+    # TODO: Check balance
+    # TODO: Add time series
