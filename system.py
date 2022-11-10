@@ -2,7 +2,7 @@ class Process:
 
     UNKNOWN_SIZE = -1
     
-    def __init__(self, name, size, other_values={}):
+    def __init__(self, name, size, other_values={}):  # why the ={} here?
         self.name = name
         self.size = size
         self.other_values = other_values
@@ -15,7 +15,7 @@ class Flow:
     def __init__(self, origin, destination, amount, is_proportion=True):
         self.origin = origin
         self.destination = destination
-        self.proportion = amount if is_proportion else -1
+        self.proportion = amount if is_proportion else -1  # why is 'propotion' not listed in the brackets after __init__?
         self.amount = amount if not is_proportion else -1
 
 class System:
@@ -25,7 +25,7 @@ class System:
         self.processes = {}
         self.flows = []
 
-    def add_process(self, *args):
+    def add_process(self, *args):  # is '*args' just shorthand for the arguments of the Process class defined above?
         p = Process(*args)
         self.processes[p.name] = p
         return p
